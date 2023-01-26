@@ -31,8 +31,7 @@ router.post('/signup', (req,res,next) => {
 })
 
 router.post('/login', (req,res,next) => {
-    console.log('works');
-    res.send('works');
+    
     if (req.body.username === '' || req.body.password === '') {
         res.json({error: "fields cannot be left blank"})
         return;
