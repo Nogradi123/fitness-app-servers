@@ -9,7 +9,7 @@ require("./db");
 // https://www.npmjs.com/package/express
 const express = require("express");
 
-const cors = require('cors');
+
 const app = express();
 const session = require('express-session');
 const MongoStore = require('connect-mongo');

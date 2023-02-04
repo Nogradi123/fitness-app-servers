@@ -63,7 +63,7 @@ function serializeTheUserObject(userObj){
   
   router.get('/serializeuser', (req, res, next)=>{
     console.log(req.session);
-    console.log(req.session.currentlyLoggedIn);
+    console.log("=-=-=-=-=-==-=-=-=", req.session.currentlyLoggedIn);
   
     if(!req.session.currentlyLoggedIn) res.json(null);
   
