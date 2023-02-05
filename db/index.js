@@ -8,7 +8,7 @@ const mongoose = require("mongoose");
 
 
 mongoose
-  .connect("mongodb://localhost/fitness-app-api-clone")
+  .connect(process.env.MONGOURL || process.env.MONGOCOMPASSURL)
   .then(() => {
     console.log('Connected to Mongo!')
   }).catch(err => {

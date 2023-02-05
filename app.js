@@ -18,7 +18,7 @@ let flash = require('connect-flash');
 // ℹ️ This function is getting exported from the config folder. It runs most pieces of middleware
 require("./config")(app);
 
-const projectName = 'fitness-app-api-clone';
+const projectName = 'fitness-app-api';
 const capitalized = string => string[0].toUpperCase() + string.slice(1).toLowerCase();
 
 app.locals.title = `${capitalized(projectName)}- Generated with Ironlauncher`;
@@ -34,7 +34,7 @@ app.use(
         maxAge: 600000
       }, // ADDED code below !!!
       store: MongoStore.create({
-        mongoUrl: "mongodb://localhost/fitness-app-api-clone"
+        mongoUrl: process.env.MONGOURL || process.env.MONGOCOMPASSURL
       })
     })
   );
